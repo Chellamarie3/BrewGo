@@ -2,7 +2,7 @@ body {
     background-color: #FAE96F;
     text-align: center;
 }
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ ul {
     border: 1px solid #555;
   }
   
-  li a {
+ nav li a {
     display: block;
     color: #000;
     padding: 8px 16px;
@@ -21,17 +21,30 @@ ul {
   }
   
   /* Change the link color on hover */
-  li a:hover {
-    background-color: #555;
+  nav li a:hover {
+    background-color: #C96E12;
     color: white;
   }
   .active {
-    background-color: #04AA6D;
     color: white;
+    align-items: center;
   }
-  li:last-child {
+ nav li:last-child {
     border-bottom: none;
   }
-  img {
-    width: 100px
+
+  .carousel-item img {
+    object-fit: contain;
+    height: 300px;
+    margin: auto;
+
   }
+  
+  button {
+    background-color: #EC9D00;
+    
+  }
+
+
+
+

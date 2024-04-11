@@ -5,20 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrewGo</title>
     <script src="js/api.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <!-- Bootstrap CSS -->
+    <!-- Input latest version of Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    
     <link rel="stylesheet" href="brewGo.css" />
   </head>
   <body>
+
+    <!--20240410 Added optional header with logo, still adjusting the layout-->
+    <!-- header-->
+    <header>
+      <div class="container">
+          <div class="row">
+                                 
+              <div class="col-12 col-md-4 col-xl-1 mt-2 mb-2">
+                <img src="img/Beer-Logo.jpg" style="width: 100px;" class="img-thumbnail rounded-circle" alt="Logo">
+              </div>
+              <div class="col mt-2">
+                <h1>BrewGo</h1>
+              </div>
+              
+          </div>
+      </div>
+  </header>
+
+
+    <!--20240410 Added optional collapsible navbar whe can use-->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+      <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Changes the alignment of flex items on the main axis (the x-axis to start)-->
+          <div class="collapse navbar-collapse justify-content-end" id="portfolioNavbar">
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link active" href="#" ><i class="fa-solid fa-house fa-lg"></i> Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#events"><i class="fa-solid fa-circle-info fa-lg"></i> Events</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#about"><i class="fa-solid fa-book fa-lg"></i> About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#Contact"><i class="fa-solid fa-desktop fa-lg"></i> Contact</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#Placeholder"><i class="fa-solid fa-folder fa-lg"></i> Placeholder</a></li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
     <nav>
       <ul>
         <li><a href="default.asp">Home</a></li>

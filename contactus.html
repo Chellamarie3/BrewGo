@@ -1,173 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrewGo</title>
     <script src="js/api.js"></script>
 
     <!-- Bootstrap CSS -->
     <!-- Input latest version of Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="brewGo.css" />
-</head>
+  </head>
 
-<body>
-
-    <!-- header -->
+  <body>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img/Beer-Logo.jpg" class="img-fluid" alt="Logo">
-                </div>
-                <div class="col">
-                    <h1>BrewGo</h1>
-                    <h2>Find a Brew for you!</h2>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-xl-1 mt-2 mb-2">
+            <img
+              id="logo"
+              src="img/Beer-Logo.jpg"
+              class="img-thumbnail rounded-circle"
+              alt="Logo"
+            />
+          </div>
+          <div class="col">
+            <h1>Contact BrewGo</h1>
+          </div>
         </div>
+      </div>
     </header>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="BrewGo.html"><img src="img/Beer-Logo.jpg" height="30" width="30"></a>
-            <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#BrewGoNavbar">
-            <span class="navbar-toggler-icon"></span>    
-            </button>
-            <div class="collapse navbar-collapse" id="BrewGoNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="BrewGo.html"><i class="fa fa-home fa-lg"></i>Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i>About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>Events</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#"><i class="fa fa-address-card ga-lg"></i>Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top mb-4">
+      <div class="container ms-0">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#portfolioNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div
+          class="collapse navbar-collapse justify-content-start"
+          id="portfolioNavbar"
+        >
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="BrewGo.html"
+                ><i class="fa-solid fa-house fa-lg"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#events"
+                ><i class="fa-solid fa-circle-info fa-lg"></i> Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html"
+                ><i class="fa-solid fa-book fa-lg"></i> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                ><i class="fa-solid fa-desktop fa-lg"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- breadcrumb -->
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="BrewGo.html">Home</a></li>
-                    <li class="breadcrumb-item active">Contact</li>
-                </ol>
-                <h2>Contact Us</h2>
-            </div>
+      <div class="row">
+        <div class="col">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="BrewGo.html">Home</a></li>
+            <li class="breadcrumb-item active">Contact</li>
+          </ol>
+          <h2>Contact Us</h2>
         </div>
+      </div>
     </div>
 
     <!-- contact section -->
     <div class="row row-content align-items-center">
-        <div class="col-sm-4">
-            <h5>Our Address</h5>
-            <address>
-                1234 Hop Highway<br>
-                Portland, OR 82345<br>
-                U.S.A.
-            </address>
-        </div>
-        <div class="col">
-            <a role="button" class="btn btn-link" href="tel:+12061349876"><i class="fa-solid fa-phone"></i>1-206-134-9876</a><br />
-            <a role="button" class="btn btn-link" href="mailto:HopHeaven@brewgo.com"><i class="fa-solid fa-envelope"></i>HopHeaven@brewgo.com</a>
-        </div>
+      <div class="col-sm-4">
+        <h5>Our Address</h5>
+        <address>
+          1234 Hop Highway<br />
+          Portland, OR 82345<br />
+          U.S.A.
+        </address>
+      </div>
+      <div class="col">
+        <a role="button" class="btn btn-link" href="tel:+12061349876"
+          ><i class="fa-solid fa-phone"></i>1-206-134-9876</a
+        ><br />
+        <a role="button" class="btn btn-link" href="mailto:HopHeaven@brewgo.com"
+          ><i class="fa-solid fa-envelope"></i>HopHeaven@brewgo.com</a
+        >
+      </div>
     </div>
 
     <!-- feedback form -->
     <div class="row row-content">
-        <div class="col-12">
-            <h2>Send us your Feedback</h2>
-            <hr>
-        </div>
-        <div class="col-md-10">
-            <form>
-                <div class="row mb-3">
-                    <label for="firstName" class="col-md-2 col-form-label">First Name</label>
-                    <div class="col-md-10">
-                        <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
-                    <div class="col-md-10">
-                        <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
-                    <div class="col-5 col-md-3">
-                        <input class="form-control" type="tel" id="areaCode" name="areaCode" placeholder="Area code">
-                    </div>
-                    <div class="col">    
-                        <input class="form-control" type="tel" name="telNum" placeholder="Tel. number">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="email" class="col-md-2 col-form-label">Email</label>
-                    <div class="col-md-10">
-                        <input class="form-control" type="email" id="email" name="email" placeholder="Email">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col offset-md-2">
-                        May we contact you?
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="contactYes" name="contactRadios" value="yes">
-                            <label class="form-check-label" for="contactYes" class="col">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="contactNo" name="contactRadios" value="no">
-                            <label class="form-check-label" for="contactNo" class="col">No</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
-                    <div class="col-md-10">
-                        <textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-md-10 offset-md-2">
-                        <button type="submit" class="btn btn-primary">Send Feedback</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+      <div class="col-12">
+        <h2>Send us your Feedback</h2>
+        <hr />
+      </div>
+      <div class="col-md-10">
+        <form>
+          <div class="row mb-3">
+            <label for="firstName" class="col-md-2 col-form-label"
+              >First Name</label
+            >
+            <div class="col-md-10">
+              <input
+                class="form-control"
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First Name"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="lastName" class="col-md-2 col-form-label"
+              >Last Name</label
+            >
+            <div class="col-md-10">
+              <input
+                class="form-control"
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last Name"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="areaCode" class="col-md-2 col-form-label"
+              >Contact Tel.</label
+            >
+            <div class="col-5 col-md-3">
+              <input
+                class="form-control"
+                type="tel"
+                id="areaCode"
+                name="areaCode"
+                placeholder="Area code"
+              />
+            </div>
+            <div class="col">
+              <input
+                class="form-control"
+                type="tel"
+                name="telNum"
+                placeholder="Tel. number"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="email" class="col-md-2 col-form-label">Email</label>
+            <div class="col-md-10">
+              <input
+                class="form-control"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col offset-md-2">
+              May we contact you?
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="contactYes"
+                  name="contactRadios"
+                  value="yes"
+                />
+                <label class="form-check-label" for="contactYes" class="col"
+                  >Yes</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="contactNo"
+                  name="contactRadios"
+                  value="no"
+                />
+                <label class="form-check-label" for="contactNo" class="col"
+                  >No</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="feedback" class="col-md-2 col-form-label"
+              >Your Feedback</label
+            >
+            <div class="col-md-10">
+              <textarea
+                class="form-control"
+                id="feedback"
+                name="feedback"
+                rows="8"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-10 offset-md-2">
+              <button type="submit" class="btn btn-primary">
+                Send Feedback
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="BrewGo.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-sm-5 text-center">
-                    <h5>Social</h5>
-                    <a href="http://instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
-                    <a href="http://facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a>
-                    <a href="http://twitter.com/"><i class="fa-brands fa-twitter fa-xl"></i></a>
-                    <a href="http://youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <i class="fa-solid fa-phone fa-lg text-primary"></i> 1-206-134-9876<br>
-                    <i class="fa-solid fa-envelope fa-lg text-primary"></i> HopHeaven@brewgo.com
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-sm-2 offset-1">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="BrewGo.html">Home</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-5 text-center">
+            <h5>Social</h5>
+            <a href="http://instagram.com/"
+              ><i class="fa-brands fa-instagram fa-xl"></i
+            ></a>
+            <a href="http://facebook.com/"
+              ><i class="fa-brands fa-facebook fa-xl"></i
+            ></a>
+            <a href="http://twitter.com/"
+              ><i class="fa-brands fa-twitter fa-xl"></i
+            ></a>
+            <a href="http://youtube.com/"
+              ><i class="fa-brands fa-youtube fa-xl"></i
+            ></a>
+          </div>
+          <div class="col-sm-4 text-center">
+            <i class="fa-solid fa-phone fa-lg text-primary"></i>
+            1-206-134-9876<br />
+            <i class="fa-solid fa-envelope fa-lg text-primary"></i>
+            HopHeaven@brewgo.com
+          </div>
         </div>
+      </div>
     </footer>
-    
-</body>
+  </body>
 </html>

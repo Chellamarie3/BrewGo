@@ -7,8 +7,7 @@ nav ul {
     margin: 0;
     padding: 0;
     width: 200px;
-    //background-color: #f1f1f1;
-    //border: 1px solid #555;
+   
   }
   
  nav li a {
@@ -51,6 +50,10 @@ nav ul {
     
     
 }
+#logo{
+  width: 100px;
+}
+
 
 
 

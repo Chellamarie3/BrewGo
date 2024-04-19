@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewGo Events</title>
+    <link rel="stylesheet" href="/portfolio project/css/brewGo.css">
+</head>
+<body>
+    <header>
+        <!-- Add your header content here -->
+    </header>
+
+    <main>
+        <section class="events">
+            <!-- Add your events content here -->
+            <h1>Upcoming Events</h1>
+            <div class="event">
+                
+                <div class="event"></div>
+                    <p style="text-align: left;">Beer Tasting at BrewGo</p>
+                    <p style="text-align: left;">October 15, 2024</p>
+                    <p style="text-align: left;">6:00 PM - 8:00 PM</p>
+                    <p style="text-align: left;">BrewGo Brewery</p>
+                </div>
+                
+                </div>
+                    <p style="text-align: left;">Beer and Cheese Pairing</p>
+                    <p style="text-align: left;">October 22, 2024</p>
+                    <p style="text-align: left;">6:00 PM - 8:00 PM</p>
+                    <p style="text-align: left;">BrewGo Brewery</p>
+                </div>
+
+                <div class="event">
+                    <p style="text-align: left;">Beer Fest w/ Live Music</p>
+                    <p style="text-align: left;">November 5, 2024</p>
+                    <p style="text-align: left;">7:00 PM - 9:00 PM</p>
+                    <p style="text-align: left;">NuBrew Brewing Co.</p>
+                </div>
+        </section>
+            </div>
+        </section>
+
+        <section class="calendar" style="float: right;">
+            <!-- Add your calendar content here -->
+            <h2>Calendar</h2>
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+            <ul id="eventList">
+                <li>Event 1</li>
+                <li>Event 2</li>
+                <li>Event 3</li>
+                <li>Event 4</li>
+                <li>Event 5</li>
+            </ul>
+            <script>
+                const eventList = document.getElementById("eventList");
+                const prevBtn = document.getElementById("prevBtn");
+                const nextBtn = document.getElementById("nextBtn");
+
+                let currentIndex = 0;
+
+                function showEvent(index) {
+                    const events = eventList.getElementsByTagName("li");
+                    for (let i = 0; i < events.length; i++) {
+                        events[i].style.display = "none";
+                    }
+                    events[index].style.display = "block";
+                }
+
+                function showNextEvent() {
+                    currentIndex++;
+                    if (currentIndex >= eventList.children.length) {
+                        currentIndex = 0;
+                    }
+                    showEvent(currentIndex);
+                }
+
+                function showPreviousEvent() {
+                    currentIndex--;
+                    if (currentIndex < 0) {
+                        currentIndex = eventList.children.length - 1;
+                    }
+                    showEvent(currentIndex);
+                }
+
+                prevBtn.addEventListener("click", showPreviousEvent);
+                nextBtn.addEventListener("click", showNextEvent);
+
+                showEvent(currentIndex);
+            </script>
+            </ul>
+        </section>
+
+        <section class="mailing-list">
+            <h2>Join Our Mailing List</h2>
+            <h5>Subscribe to receive updates on upcoming events</h5>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Add your footer content here -->
+        <p style="text-align: center;">&copy; 2024 BrewGo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

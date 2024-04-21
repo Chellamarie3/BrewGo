@@ -1,111 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrewGo Events</title>
-    <link rel="stylesheet" href="/portfolio project/css/brewGo.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrewGo</title>
+    <script src="js/api.js"></script>
+    <!-- Bootstrap CSS -->
+    <!-- Input latest version of Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="brewGo.css" />
+  </head>
+  <body>
+    <!--20240410 Added optional header with logo, still adjusting the layout-->
+    <!-- header-->
     <header>
-        <!-- Add your header content here -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-xl-1 mt-2 mb-2">
+            <img
+              id="logo"
+              src="img/Beer-Logo.jpg"
+              class="img-thumbnail rounded-circle"
+              alt="Logo"
+            />
+          </div>
+          <div class="col mt-2">
+            <h1>BrewGo</h1>
+          </div>
+        </div>
+      </div>
     </header>
 
+    <!--20240410 Added optional collapsible navbar whe can use-->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top mb-4">
+      <div class="container ms-0">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#portfolioNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Changes the alignment of flex items on the main axis (the x-axis to start)-->
+        <div
+          class="collapse navbar-collapse justify-content-start"
+          id="portfolioNavbar"
+        >
+          <ul class="navbar-nav w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="BrewGo.html"
+                ><i class="fa-solid fa-house fa-lg"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                ><i class="fa-solid fa-circle-info fa-lg"></i> Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html"
+                ><i class="fa-solid fa-book fa-lg"></i> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html"
+                ><i class="fa-solid fa-desktop fa-lg"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <main>
-        <section class="events">
-            <!-- Add your events content here -->
-            <h1>Upcoming Events</h1>
-            <div class="event">
-                
-                <div class="event"></div>
-                    <p style="text-align: left;">Beer Tasting at BrewGo</p>
-                    <p style="text-align: left;">October 15, 2024</p>
-                    <p style="text-align: left;">6:00 PM - 8:00 PM</p>
-                    <p style="text-align: left;">BrewGo Brewery</p>
-                </div>
-                
-                </div>
-                    <p style="text-align: left;">Beer and Cheese Pairing</p>
-                    <p style="text-align: left;">October 22, 2024</p>
-                    <p style="text-align: left;">6:00 PM - 8:00 PM</p>
-                    <p style="text-align: left;">BrewGo Brewery</p>
-                </div>
+      <section class="events" style="margin-left: 300px">
+        <!-- Add your events content here -->
+        <h1>Upcoming Events</h1>
+        <div class="event">
+          <p style="text-align: left">Beer Tasting at BrewGo</p>
+          <p style="text-align: left">October 15, 2024</p>
+          <p style="text-align: left">6:00 PM - 8:00 PM</p>
+          <p style="text-align: left">BrewGo Brewery</p>
+        </div>
+        <div class="event">
+          <p style="text-align: left">Beer and Cheese Pairing</p>
+          <p style="text-align: left">October 22, 2024</p>
+          <p style="text-align: left">6:00 PM - 8:00 PM</p>
+          <p style="text-align: left">BrewGo Brewery</p>
+        </div>
+        <div class="event">
+          <p style="text-align: left">Beer Fest w/ Live Music</p>
+          <p style="text-align: left">November 5, 2024</p>
+          <p style="text-align: left">7:00 PM - 9:00 PM</p>
+          <p style="text-align: left">NuBrew Brewing Co.</p>
+        </div>
+      </section>
 
-                <div class="event">
-                    <p style="text-align: left;">Beer Fest w/ Live Music</p>
-                    <p style="text-align: left;">November 5, 2024</p>
-                    <p style="text-align: left;">7:00 PM - 9:00 PM</p>
-                    <p style="text-align: left;">NuBrew Brewing Co.</p>
-                </div>
-        </section>
-            </div>
-        </section>
+      <section class="mailing-list">
+        <h2 style="text-align: center">Join Our Mailing List</h2>
+        <h5 style="text-align: center">
+          Subscribe to receive updates on upcoming events
+        </h5>
 
-        <section class="calendar" style="float: right;">
-            <!-- Add your calendar content here -->
-            <h2>Calendar</h2>
-            <button id="prevBtn">Previous</button>
-            <button id="nextBtn">Next</button>
-            <ul id="eventList">
-                <li>Event 1</li>
-                <li>Event 2</li>
-                <li>Event 3</li>
-                <li>Event 4</li>
-                <li>Event 5</li>
-            </ul>
-            <script>
-                const eventList = document.getElementById("eventList");
-                const prevBtn = document.getElementById("prevBtn");
-                const nextBtn = document.getElementById("nextBtn");
-
-                let currentIndex = 0;
-
-                function showEvent(index) {
-                    const events = eventList.getElementsByTagName("li");
-                    for (let i = 0; i < events.length; i++) {
-                        events[i].style.display = "none";
-                    }
-                    events[index].style.display = "block";
-                }
-
-                function showNextEvent() {
-                    currentIndex++;
-                    if (currentIndex >= eventList.children.length) {
-                        currentIndex = 0;
-                    }
-                    showEvent(currentIndex);
-                }
-
-                function showPreviousEvent() {
-                    currentIndex--;
-                    if (currentIndex < 0) {
-                        currentIndex = eventList.children.length - 1;
-                    }
-                    showEvent(currentIndex);
-                }
-
-                prevBtn.addEventListener("click", showPreviousEvent);
-                nextBtn.addEventListener("click", showNextEvent);
-
-                showEvent(currentIndex);
-            </script>
-            </ul>
-        </section>
-
-        <section class="mailing-list">
-            <h2>Join Our Mailing List</h2>
-            <h5>Subscribe to receive updates on upcoming events</h5>
-            <form>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
+        <form style="text-align: center">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
     </main>
 
+    <script>
+      const eventList = document.getElementById("eventList");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let currentIndex = 0;
+
+      function showEvent(index) {
+        const events = eventList.getElementsByTagName("li");
+        for (let i = 0; i < events.length; i++) {
+          events[i].style.display = "none";
+        }
+        events[index].style.display = "block";
+      }
+
+      function showNextEvent() {
+        currentIndex++;
+        if (currentIndex >= eventList.children.length) {
+          currentIndex = 0;
+        }
+        showEvent(currentIndex);
+      }
+
+      function showPreviousEvent() {
+        currentIndex--;
+        if (currentIndex < 0) {
+          currentIndex = eventList.children.length - 1;
+        }
+        showEvent(currentIndex);
+      }
+
+      prevBtn.addEventListener("click", showPreviousEvent);
+      nextBtn.addEventListener("click", showNextEvent);
+
+      showEvent(currentIndex);
+    </script>
+
     <footer>
-        <!-- Add your footer content here -->
-        <p style="text-align: center;">&copy; 2024 BrewGo. All rights reserved.</p>
+      <!-- Add your footer content here -->
+      <p style="text-align: center">&copy; 2024 BrewGo. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>

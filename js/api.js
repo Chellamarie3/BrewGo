@@ -1,9 +1,9 @@
 function getNearestBrew() {
-  const resultList = document.getElementById("result");
+  const resultList = document.getElementById("mainContaner");
   resultList.innerHTML = "";
   const getBreweriesNearCoordinates = (position) => {
     fetch(
-      `https://api.openbrewerydb.org/v1/breweries?by_dist=${position.coords.latitude},${position.coords.longitude}&per_page=5`
+      `https://api.openbrewerydb.org/v1/breweries?by_dist=${position.coords.latitude},${position.coords.longitude}&per_page=6`
     )
       .then((response) => response.json())
       .then((res) => {
@@ -27,8 +27,11 @@ function getNearestBrew() {
 
           const resultItem = document.createElement("div");
           //resultItem.textContent = result.name;
+          resultItem.classList.add("col-xs-12");
+          resultItem.classList.add("col-md-6");
+          resultItem.classList.add("col-lg-3");
           resultItem.classList.add("card");
-          resultItem.style.width = "300px";
+          resultItem.style.width = "400px";
 
           const img = document.createElement("img");
           img.classList.add("card-img-top");

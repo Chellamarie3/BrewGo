@@ -54,6 +54,12 @@ nav ul {
   width: 100px;
 }
 
+#ratingModal {
+  .modal-header {
+      background-color: #EC9D00 ;
+  }
+}
+
 
 
 
